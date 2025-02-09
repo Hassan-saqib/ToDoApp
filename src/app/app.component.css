@@ -1,0 +1,28 @@
+ngul {
+  display: flex;
+  flex-direction: column;       /* Stack list items vertically */
+  list-style-type: none;        /* Remove default bullet points */
+  padding: 0;                   /* Remove default padding */
+  margin: 0;                    /* Remove default margin */
+}
+
+li {
+  display: flex;                /* Use flex layout for list items */
+  align-items: center;          /* Vertically align the content */
+  margin-bottom: 15px;          /* Adds space between list items (optional) */
+}
+
+li span {
+  margin-right: 10px;           /* Adds space between the ID, task name, and delete button */
+}
+
+li button {
+  margin-left: 10px;            /* Adds space between task name and delete button */
+}
+
+/* Styles for the tasks */
+.done {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;  /* Crosses out the text */
+  color: rgb(23, 2, 2);                   /* Changes the color to gray */
+}

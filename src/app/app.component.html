@@ -1,0 +1,20 @@
+<h1>To Do List</h1>
+
+<input [(ngModel)]="task" type="text" placeholder="enter task name" />
+<!-- two way binding , storing the input value to task propery  -->
+<button (click)="addTask()">Add Task</button>
+<!-- binding the function  -->
+
+<!-- this is loop to show on the UI the list -->
+<ul>
+  <li *ngFor="let task of taskList;" [ngClass]="{'done': task.isDone}"> 
+    <!-- is an Angular directive that loops through the array taskList and creates an <li> element for each task in the list. 
+       If task.isDone is true, the class done will be added to the <li>.-->
+    <input type="checkbox" (change)="taskDone(task)" [checked]="task.isDone" /> 
+    <!-- change is an angular binding It triggers the method taskDone(task) whenever the checkbox state changes (i.e., when the user checks or unchecks the box). 
+    [checked]: This binds the checked property of the checkbox to the value of task.isDone -->
+    <span>{{ task.id }}</span>
+    <span>{{ task.name }}</span>
+    <button (click)='deleteTask(task.id)'>Delete</button>
+  </li>
+</ul>
