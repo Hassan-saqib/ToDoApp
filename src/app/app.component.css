@@ -1,11 +1,3 @@
-ngul {
-  display: flex;
-  flex-direction: column;       /* Stack list items vertically */
-  list-style-type: none;        /* Remove default bullet points */
-  padding: 0;                   /* Remove default padding */
-  margin: 0;                    /* Remove default margin */
-}
-
 li {
   display: flex;                /* Use flex layout for list items */
   align-items: center;          /* Vertically align the content */
@@ -13,9 +5,14 @@ li {
 }
 
 li span {
-  margin-right: 10px;           /* Adds space between the ID, task name, and delete button */
+  margin-right: 15px;           /* Adds space between the ID, task name, and delete button */
 }
 
+button{
+
+  margin-left: 10px;
+  
+}
 li button {
   margin-left: 10px;            /* Adds space between task name and delete button */
 }

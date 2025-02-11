@@ -12,9 +12,7 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   task=''; // created to store list of tasks from the input field
   taskList: {id:number, name:string, isDone: boolean}[]= [] //created to show the stored tasks 
-  trackTaskId(index: number, task: any): number { //functiona created for checkbox 
-    return task.id;
-  }
+
   
 
 addTask(){
@@ -35,7 +33,7 @@ deleteTask(id:number){
 
 }
 
-taskDone(task: { id: number, name: string, isDone: boolean }) {
+taskDone(task: { isDone: boolean }) {
   task.isDone = !task.isDone; // This is the function that handles marking a task as done or not done.
 }
 
